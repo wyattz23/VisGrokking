@@ -1,0 +1,44 @@
+enable_neptune: True
+neptune_project: "casanovo/recurrent"
+neptune_api_token: "eyJhcGlfYWRkcmVzcyI6Imh0dHBzOi8vYXBwLm5lcHR1bmUuYWkiLCJhcGlfdXJsIjoiaHR0cHM6Ly9hcHAubmVwdHVuZS5haSIsImFwaV9rZXkiOiIwNDlhZjhhMS1jNDM5LTRjOGItYTFlYS03N2U4ZDBhYmU0NTAifQ=="
+n_nodes: 1
+train_from_resume: False
+#Model Size
+block_size: 1024 
+vocab_size: 4 
+n_layer: 8
+n_head: 4
+n_embd: 16
+#node number:
+m: 2
+
+# Use epochs instead of iters
+warmup_iters: 
+max_iters: 
+max_len: 10
+max_epochs: 10000000
+warm_up_epochs: 1
+learning_rate: 0.00001
+weight_decay: 0.01
+gradient_clip_val: 2
+gradient_clip_algorithm: "norm"
+accumulate_grad_batches: 1
+sync_batchnorm: False
+SWA: False #  
+
+# Training/inference options.
+bz_per_gpu_train: 128
+bz_per_gpu_test: 128
+# n_beams: 5
+n_beams: 5 # No beam search
+
+logger:
+
+num_sanity_val_steps: 0
+
+train_from_scratch: True
+
+save_model: False
+model_save_folder_path: "./Re67"
+save_weights_only: True
+every_n_train_steps: 1000

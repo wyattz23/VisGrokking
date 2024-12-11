@@ -1,0 +1,12 @@
+number of parameters: 0.40M
+Traceback (most recent call last):
+  File "/mnt/petrelfs/zhangxiang/pptm/xusheng/modelR/complete_regular_2actions/run.py", line 170, in <module>
+    main()
+  File "/mnt/petrelfs/zhangxiang/pptm/xusheng/modelR/complete_regular_2actions/run.py", line 167, in main
+    train(model_config)    
+    ^^^^^^^^^^^^^^^^^^^
+  File "/mnt/petrelfs/zhangxiang/pptm/xusheng/modelR/complete_regular_2actions/run.py", line 87, in train
+    callbacks.append(pl.pytorch.callbacks.LearningRateMonitor(logging_interval='epoch'))
+    ^^^^^^^^^
+UnboundLocalError: cannot access local variable 'callbacks' where it is not associated with a value
+srun: error: SH-IDC1-10-140-24-111: task 0: Exited with exit code 1

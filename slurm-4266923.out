@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/mnt/petrelfs/zhangxiang/pptm/xusheng/modelR/complete_regular_2actions/run.py", line 170, in <module>
+    main()
+  File "/mnt/petrelfs/zhangxiang/pptm/xusheng/modelR/complete_regular_2actions/run.py", line 167, in main
+    train(model_config)    
+    ^^^^^^^^^^^^^^^^^^^
+  File "/mnt/petrelfs/zhangxiang/pptm/xusheng/modelR/complete_regular_2actions/run.py", line 70, in train
+    dataModule = MyDataLoader(training_args["max_len"], 64, training_args["bz_per_gpu_train"], training_args["bz_per_gpu_test"])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/petrelfs/zhangxiang/pptm/xusheng/modelR/complete_regular_2actions/dataloader_parity.py", line 78, in __init__
+    self.train_dataset = ParityTrain(max_len)
+                         ^^^^^^^^^^^^^^^^^^^^
+TypeError: ParityTrain.__init__() missing 1 required positional argument: 'm'
+srun: error: SH-IDC1-10-140-24-111: task 0: Exited with exit code 1
